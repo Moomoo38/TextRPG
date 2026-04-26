@@ -37,6 +37,9 @@ class Player:
                     print("Invalid selection, please input again")
                     try_again = True
 
+    def take_damage(self, damage_taken):
+        self.health = min(self.health - (damage_taken - self.resilience), 0)
+
     def __str__(self):
         return f"name: {self.name} \nconstitution: {self.stats["constitution"]} \nresilience: {self.stats["resilience"]} \nstrength: {self.stats["strength"]} \nagility: {self.stats["agility"]}"
-        
+    
