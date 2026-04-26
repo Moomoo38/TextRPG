@@ -1,5 +1,9 @@
+import Player
+
 def main():
-    print("Wow this sure is cool")
+    player = Player.Player()
+    player.create_character()
+    print(player)
 
 if __name__ == "__main__":
     main()
